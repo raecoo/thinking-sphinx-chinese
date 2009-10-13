@@ -52,7 +52,7 @@ module ThinkingSphinx
     SourceOptions = %w( mysql_connect_flags sql_range_step sql_query_pre
       sql_query_post sql_ranged_throttle sql_query_post_index )
     
-    IndexOptions  = %w( charset_table charset_type docinfo enable_star
+    IndexOptions  = %w( charset_table charset_type charset_dictpath docinfo enable_star
       exceptions html_index_attrs html_remove_elements html_strip ignore_chars
       min_infix_len min_prefix_len min_word_len mlock morphology ngram_chars
       ngram_len phrase_boundary phrase_boundary_step preopen stopwords
@@ -63,7 +63,8 @@ module ThinkingSphinx
     attr_accessor :config_file, :searchd_log_file, :query_log_file,
       :pid_file, :searchd_file_path, :address, :port, :allow_star,
       :database_yml_file, :app_root, :bin_path, :model_directories,
-      :delayed_job_priority, :searchd_binary_name, :indexer_binary_name
+      :delayed_job_priority, :searchd_binary_name, :indexer_binary_name,
+      :charset_dictpath
     
     attr_accessor :source_options, :index_options
     

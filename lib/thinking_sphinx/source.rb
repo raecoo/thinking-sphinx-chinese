@@ -144,7 +144,7 @@ module ThinkingSphinx
     end
     
     def utf8?
-      @index.options[:charset_type] == "utf-8"
+      @index.options[:charset_type] =~ /utf-8|zh_cn.utf-8/
     end
   end
 end

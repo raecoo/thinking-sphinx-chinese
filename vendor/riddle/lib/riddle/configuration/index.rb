@@ -2,7 +2,7 @@ module Riddle
   class Configuration
     class Index < Riddle::Configuration::Section
       self.settings = [:source, :path, :docinfo, :mlock, :morphology,
-        :stopwords, :wordforms, :exceptions, :min_word_len, :charset_type,
+        :stopwords, :wordforms, :exceptions, :min_word_len, :charset_type, :charset_dictpath,
         :charset_table, :ignore_chars, :min_prefix_len, :min_infix_len,
         :prefix_fields, :infix_fields, :enable_star, :ngram_len, :ngram_chars,
         :phrase_boundary, :phrase_boundary_step, :html_strip,
@@ -10,7 +10,7 @@ module Riddle
       
       attr_accessor :name, :parent, :sources, :path, :docinfo, :mlock,
         :morphologies, :stopword_files, :wordform_files, :exception_files,
-        :min_word_len, :charset_type, :charset_table, :ignore_characters,
+        :min_word_len, :charset_type, :charset_table, :ignore_characters, :charset_dictpath,
         :min_prefix_len, :min_infix_len, :prefix_field_names,
         :infix_field_names, :enable_star, :ngram_len, :ngram_characters,
         :phrase_boundaries, :phrase_boundary_step, :html_strip,
